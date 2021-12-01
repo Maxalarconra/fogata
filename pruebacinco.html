@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Max Alarcón Rätsch</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://images.pngnice.com/download/2112/Wood-Campfire-Vector-PNG-Photos.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <script src="script.js"></script>
+
+  <body>
+    <div>
+      <div id="TODO">
+        <div id="PRIMER-PEDIDO">
+          <div class="textoUno">
+            <h2>1.</h2>
+            <p>
+              Habiéndote alejado demasiado de tu tienda de acampar, te
+              encuentras perdido en el bosque. Luego de recorrer el lugar por
+              unas horas y con el cielo a punto de oscurecer, te encuentras en
+              medio de un claro entre los árboles. Un montón de ramas dentro de
+              un círculo de piedras en medio del lugar indican que quizá alguien
+              estuvo aquí antes que tú.
+            </p>
+            <br />
+            <button
+              type="button"
+              onclick="document.getElementById('bolsillos').style.display = 'block'"
+            >
+              Revisar Bolsillos
+            </button>
+          </div>
+
+          <div class="textoUno" id="bolsillos">
+            <h2>2.</h2>
+            <p>
+              Revisando todos los bolsillos de tu ropa, encuentras tres ítems:
+              un encendedor, las llaves de tu auto, y tu celular. No tomaste
+              muchas cosas antes de salir a dar este paseo, por lo que no te
+              soprende lo poco que llevas encima.
+            </p>
+            <br />
+            <p>
+              Consideras que las llaves de tu auto serán inútiles en esta
+              situación, y te enfocas en el encendedor y el celular.
+            </p>
+            <br />
+            <p>
+              A pesar de tener suficiente batería para un par de horas, tu
+              celular no recibe ninguna señal tan dentro del bosque.
+            </p>
+            <br />
+            <p>
+              Por suerte las noches de verano son cortas, pero aún así te
+              preocupa el frío y los peligros de la noche en el bosque. Decides
+              que el mejor plan de acción será intentar encender la fogata con
+              tu encendedor.
+            </p>
+            <br />
+            <h1 id="fogata">[[ Fogata ]]</h1>
+            <br />
+            <button
+              type="button"
+              onclick="document.getElementById('fogata').style.color = 'orange'"
+            >
+              Encender fogata.
+            </button>
+            <br />
+            <br />
+            <button type="button" onclick="continuarUno()">Continuar</button>
+          </div>
+
+          <div class="textoUno" id="continuarUno">
+            <h2>3.</h2>
+            <p>
+              Con el fuego encendido, ya no te sientes tan ansioso como antes.
+              Aún así, la situación te preocupa, y no quieres estar toda la
+              noche esperando a ver si alguien se entera de tu desaparición.
+            </p>
+            <br />
+            <p>Decides pedir ayuda...</p>
+            <br />
+            <p class="dialogue"><i>"¿Hola?"</i></p>
+            <br />
+            <p>...pero no recibes ninguna respuesta.</p>
+            <br />
+            <p>¿Quizá sea mejor llamar más fuerte?</p>
+            <br />
+            <p class="dialogue" id="fuerte"><i>"¿HOLA?"</i></p>
+            <br />
+            <button onclick="document.getElementById('fuerte').style.fontSize = '50px';">Llamar más fuerte.</button>
+            <br />
+            <br />
+            <button type="button" onclick="continuarDos()">Continuar</button>
+            <br />
+          </div>
+        </div>
+
+        <div id="SEGUNDO-PEDIDO">
+          <div id="continuarDos" class="textoUno">
+            <h2>4.</h2>
+            <p>
+              Das algunas vueltas por el claro, llamando a cada lado, pero no
+              hay respuesta.
+            </p>
+            <br />
+            <p>
+              Cuando vuelves al centro donde está tu fogata, te das cuenta que
+              de a poco se ha empezado a apagar.
+            </p>
+            <br />
+            <img src="https://i.imgur.com/KvVVUMD.png" alt="leña-apagada" />
+            <br />
+            <br />
+            <p>Probablemente le falte leña.</p>
+            <br />
+            <button type="button" onclick="buscarLena()">
+              Buscar más leña.
+            </button>
+          </div>
+
+          <div id="buscarLena" class="textoUno">
+            <h2>5.</h2>
+            <p>
+              Buscando por los alrededores, te encuentras un par de ramitas que,
+              a pesar de pequeñas, son varias y ayudarán a mantener vivo el
+              fuego.
+            </p>
+            <br />
+            <h2 id="ramitas">
+              [[ Ramita ]] [[ Ramita ]] [[ Ramita ]] [[ Ramita ]]
+            </h2>
+            <br />
+            <br />
+            <button type="button" onclick="reunirRamitas()">
+              Reunir ramitas.
+            </button>
+            <br />
+            <br />
+            <p>
+              Después de reunir las ramitas, las recoges y resguardas en tus
+              brazos.
+            </p>
+            <br />
+            <button type="button" onclick="recogerRamitas()">
+              Recoger ramitas.
+            </button>
+            <br />
+            <br />
+            <button type="button" onclick="continuarTres()">Continuar</button>
+          </div>
+
+          <div id="continuarTres" class="textoUno">
+            <h2>6.</h2>
+            <p>
+              Vuelves al centro del claro y revisas la fogata. Por suerte, aún
+              no se ha apagado por completo.
+            </p>
+            <br />
+            <img
+              src="https://i.imgur.com/KvVVUMD.png"
+              id="lenaApagada"
+              alt="leña apagada"
+            />
+            <br />
+            <br />
+            <p>
+              Ordenando las ramitas en tus brazos, te preparas para añadirlas al
+              fuego una a una.
+            </p>
+            <br />
+            <button type="button" onclick="avivarFuego()">Avivar fuego</button>
+            <br />
+            <br />
+            <button type="button" onclick="continuarCuatro()">Continuar</button>
+          </div>
+        </div>
+
+        <div id="TERCER-PEDIDO">
+          <div id="continuarCuatro" class="textoUno">
+            <h2>7.</h2>
+            <p>
+              Con las llamas vivas, te sientas frente al fuego a esperar a que
+              la noche pase. No quieres arriesgarte a perderte en el bosque de
+              nuevo.
+            </p>
+            <br />
+            <p>Pero de repente, escuchas un ruido cerca de sus pies.</p>
+            <br />
+            <button type="button" onclick="alertaEscab()">
+              Revisar entre tus pies
+            </button>
+            <br />
+            <br />
+            <button type="button" onclick="continuarCinco()">Continuar</button>
+          </div>
+
+          <div id="continuarCinco" class="textoUno">
+            <h2>8.</h2>
+            <p>
+              Te encuentras un escarabajo. Probablemente se sintió atraído por
+              el fuego y cayó cerca de tus pies al avivar las llamas.
+            </p>
+            <br />
+            <img
+              id="escab"
+              src="https://i.imgur.com/XEc0Y30.png"
+              alt="Escarabajo"
+            />
+            <br />
+            <p>
+              Te gustan mucho los escarabajos, y te da pena el pensar que podría
+              caer al fuego y quemarse, así que decides tomarlo y alejarlo de la
+              fogata.
+            </p>
+            <br />
+            <button type="button" onclick="guardarEscab()">
+              Tomar escarabajo
+            </button>
+            <br />
+            <br />
+            <p>Lo guardas en tu palma y lo dejas en un arbusto.</p>
+            <br />
+            <button type="button" onclick="PrintImage(); return false;">
+              Liberar escarabajo
+            </button>
+            <br />
+            <br />
+            <button type="button" onclick="continuarSeis()">Continuar</button>
+          </div>
+
+          <div id="continuarSeis" class="textoUno">
+            <h2>9.</h2>
+            <p>
+              Ya más tranquilo te das cuenta de lo cansado que estás. Has
+              caminado bastante, y la oscuridad de la noche alimenta tu deseo de
+              dormir.
+            </p>
+            <br />
+            <p>
+              Sabes que es un lugar tranquilo - no has escuchado ningún animal
+              peligroso en el rato que has estado aquí, además de estar casi
+              seguro que ésta es un área cerrada y reservada para campistas.
+              Piensas que tal vez dormir no sea la peor opción.
+            </p>
+            <br />
+            <p>
+              Te recuestas junto a la fogata - lo suficientemente cerca para
+              mantener el calor pero lo suficientemente lejos para no quemarte -
+              y cierras los ojos para recobrar el sueño.
+            </p>
+            <br />
+            <button type="button" onclick="continuarSiete()">Continuar</button>
+          </div>
+
+          <div id="continuarSiete" class="textoUno">
+            <h2>10.</h2>
+            <p>
+              Sientes el sueño apoderarse de tu mente, y tus brazos y piernas se
+              sienten cada vez más livianos.
+            </p>
+            <br />
+            <p>
+              Con esperanza de que el día aclarará y podrás encontrar tu camino
+              de vuelta al campamento, o con la posibilidad de que tus amigos
+              podrán encontrarte antes gracias a la luz de la fogata, te quedas
+              dormido.
+            </p>
+            <br />
+            <p>Es un sueño tranquilo, y sueñas con...</p>
+            <br />
+            <button type="button" onclick="borrarTodo()">Continuar</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="Carabajo" class="textoUno"><h1>Escarabajos :)</h1></div>
+    </div>
+  </body>
+</html>

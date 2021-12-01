@@ -1,0 +1,82 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'VT323', monospace;
+}
+
+body {
+    background-color: rgb(12, 4, 4);
+}
+
+.textoUno {
+    color: blanchedalmond;
+    font-size: 25px;
+    text-align: center;
+    margin: 100px;
+    padding: 100px;
+}
+
+.dialogue {
+    color: goldenrod;
+}
+
+#TODO {
+    display: block;
+}
+
+#bolsillos {
+    display: none;
+}
+
+#continuarUno {
+    display: none;
+}
+
+#continuarDos {
+    display: none;
+}
+
+#continuarTres {
+    display: none;
+}
+
+#continuarCuatro {
+    display: none;
+}
+
+#continuarCinco {
+    display: none;
+}
+
+#continuarSeis {
+    display: none;
+}
+
+#continuarSiete {
+    display: none;
+}
+
+#buscarLena {
+    display: none;
+}
+
+#fogata {
+    font-size: 40px;
+    color: gray;
+}
+
+#ramitas {
+    font-size: 40px;
+    color: rgb(82, 64, 26)
+}
+
+#escab {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 50%;
+}
+
+#Carabajo {
+    display: none;
+}
